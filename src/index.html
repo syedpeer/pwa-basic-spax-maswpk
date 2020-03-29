@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QUILLConf</title>
+
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="icon" type="image/png" href="./img/icons/favicon.png" />
+
+    <meta name="theme-color" content="#2A3443" />
+    <meta name="description" content="PWA Tutorial Basic." />
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="./img/icons/icon-144x144.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-title" content="PWAConf" />
+
+    <style>
+      #speakers, #schedule, #code-of-conduct, #about { display: block;}
+    </style>
+
+    <script>
+      function hideShowSection(sectName){
+        var elem = document.querySelector(sectName);
+        if (elem.style.display === "none") {
+          elem.style.display = "block";
+        } else {
+          elem.style.display = "none";
+        }
+      }
+
+      function dspPageSection(sectName){
+        resetAllSections();
+        document.querySelector(sectName).style.display = "block";
+      }
+
+      function resetAllSections(){
+        document.querySelector("#home").style.display = "none";
+        document.querySelector("#speakers").style.display = "none";
+        document.querySelector("#schedule").style.display = "none";
+        document.querySelector("#code-of-conduct").style.display = "none";
+        document.querySelector("#about").style.display = "none";
+      }
+
+      function removeElement() {
+        document.getElementById("imgbox1").style.display = "none";
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href='#' onclick="dspPageSection('#home')">Home</a>
+      <a href='#' onclick="dspPageSection('#speakers')">Speakers</a>
+      <a href='#' onclick="dspPageSection('#schedule')">Schedule</a>
+      <a href='#' onclick="dspPageSection('#code-of-conduct')">CoC</a>
+      <a href='#' onclick="dspPageSection('#about')">About</a>
+    </div>
+
+    <header>
+      <h1>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        QUILL
+      </h1>
+    </header>
+
+    <div class="scrollmenu">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#support">Support</a>
+      <a href="#blog">Blog</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+
+    <!-- <nav>
+      <a href="#speakers">Speakers</a> <a href="#schedule">Schedule</a>
+      <a href="#code-of-conduct">Code of conduct</a>
+    </nav> -->
+
+    <div class="alert" role="alert" hidden>
+      Your browser does not support ServiceWorker. The app will not be available
+      offline.
+    </div>
+
+    <main>
+
+      <section id="home">
+        <p>
+          Welcome to PWA QUILL, the premier made-up PWA conference in the world! The
+          conference is held <b>September 13-14</b> in sunny Santa Cruz, CA.
+        </p>
+
+        <p>
+          The conference is a single day, single track event focused on building
+          kick-ass user experiences on the web.
+        </p>
+      </section>
+
+      <p>
+        <!-- <a href="#" onclick="hideShowSpeakers(); return false;">LINK</a> -->
+        <button onclick="hideShowSection('#speakers')">speakers</button>
+        <button onclick="hideShowSection('#schedule')">schedule</button>
+        <button onclick="hideShowSection('#code-of-conduct')">COC</button>
+        <button onclick="resetAllSections()">Reset</button>
+      </p>
+
+      <section id="speakers">
+        <h2>Speakers</h2>
+        <div class="speakers"><div class="loader" hidden>Loading...</div></div>
+      </section>
+
+      <section id="schedule">
+      <h2>Schedule</h2>
+        <p>All the presentations will be held in the main auditorium.</p>
+        <div class="schedule"><div class="loader" hidden>Loading...</div></div>
+      </section>
+
+      <section id="code-of-conduct">
+        <h2>Code of conduct</h2>
+        <p>
+          All attendees are required to follow the
+          <a href="http://confcodeofconduct.com/">code of conduct</a>. Be nice to
+          everyone or get kicked out.
+        </p>
+      </section>
+
+      <section id="about">
+        <p>
+          Welcome to About Page for <b>QUILL</b> in sunny Qatar.
+        </p>
+        <p>
+          They're using our own satellites against us. And the clock is ticking. Is this my espresso machine? Wh-what is-h-how did you get my espresso machine? Hey, you know how I'm, like, always trying to save the planet? Here's my chance. Did he just throw my cat out of the window?
+        </p>
+        <p>
+          Yes, Yes, without the oops! Remind me to thank John for a lovely weekend. I gave it a cold? I gave it a virus. A computer virus. Hey, you know how I'm, like, always trying to save the planet? Here's my chance. So you two dig up, dig up dinosaurs? So you two dig up, dig up dinosaurs?
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <!-- <p>QUILL schedule. 2020</p> -->
+      <a href="./index.html" class="w3-bar-item w3-button">
+          <i class="fa fa-home fa-lg"></i></a>
+    </footer>
+
+    <script>
+      function openNav()  { document.getElementById("mySidenav").style.width = "250px"; }
+      function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+    </script>
+
+  </body>
+</html>
