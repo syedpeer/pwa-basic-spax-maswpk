@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A PWA tutorial app. Tutorial  [Vaadin website](https://vaadin.com/pwa).",
   "main": "app.js",
-  "homepage": "http://syedpeer.github.io/pwa-basic-conf-maswpk",
+  "homepage": "http://syedpeer.github.io/pwa-basic-spax-maswpk.git",
   "scripts": {
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server",

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PWAQuill</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    <link rel="icon" type="image/png" href="../img/icons/favicon.png" />
+
+    <meta name="theme-color" content="#2A3443" />
+    <meta name="description" content="PWA Tutorial Application for a fictional conference."
+    />
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="./img/icons/icon-144x144.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-title" content="PWAConf" />
+    <link rel="manifest" href="./manifest.json">
+
+    <style>
+
+    table { border-collapse: collapse;}
+    .ar-huruf_x {
+      font-size:2.32em;
+      line-height:1.5em;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href='#' onclick="dspPageSection('#home')">Home</a>
+      <a href='#' onclick="dspPageSection('#speakers')">Speakers</a>
+      <a href='#' onclick="dspPageSection('#schedule')">Schedule</a>
+      <a href='./pages/code-of-conduct.html'>CoC</a>
+      <a href='./pages/about.html'>About</a>
+    </div>
+
+    <header>
+      <h1>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        QUILL
+      </h1>
+      <nav>
+        <!--
+        <a href="../index.html">&lt;</a>
+        <a href="#about">ABOUT</a>
+        -->
+      </nav>
+    </header>
+
+    <div class="alert" role="alert" hidden>
+      Your browser does not support ServiceWorker. The app will not be available
+      offline.
+    </div>
+
+    <main>
+      <h1>This is an about page</h1>
+
+      <table width="100%" border="1">
+        <tbody>
+          <tr>
+            <td>Form</td>
+            <td width="225" align="center">II</td>
+            <td>Mudari Verb</td>
+            <td colspan="3" align="center"><span class="ar-huruf amiri">فَعَّلَ</span></td>
+          </tr>
+          <tr>
+            <td>Meaning</td>
+            <td width="37" align="center">1. To indicate doing something a lot<br/> 2. to make the verb transitive</td>
+            <td>Notes</td>
+            <td colspan="3" align="left">1.&nbsp;&nbsp;&nbsp;&nbsp; For example, <em>tawwafa</em> means “to do a lot of <em>tawaaf</em>”.<p></p>
+            <p>2.&nbsp;&nbsp;&nbsp;&nbsp; <span class="ar-huruf amiri" style="font-size:2.32em; line-height:1.5em;">عظُمَ</span> means “to be grand” while <span class="ar-huruf amiri" style="font-size:2.32em; line-height:1.5em;">عظّم</span> means “to praise” (or “to make someone grand”)</p></td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center">Meaning</td>
+            <td colspan="1" align="center">Notes</td>
+          </tr>
+          <tr>
+            <td colspan="3" width="37" align="center">1. To indicate doing something a lot<br/> 2. to make the verb transitive</td>
+            <td colspan="1" align="left">1.&nbsp;&nbsp;&nbsp;&nbsp; For example, <em>tawwafa</em> means “to do a lot of <em>tawaaf</em>”.<p></p>
+            <p>2.&nbsp;&nbsp;&nbsp;&nbsp; <span class="ar-huruf amiri" style="font-size:2.32em; line-height:1.5em;">عظُمَ</span> means “to be grand” while <span class="ar-huruf amiri" style="font-size:2.32em; line-height:1.5em;">عظّم</span> means “to praise” (or “to make someone grand”)</p></td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center">Examples</td>
+            <td colspan="1" align="center">From Quran</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+            <p><span class="ar-huruf amiri">جَوَّل</span> -to roam a lot</p>
+            <p><span class="ar-huruf amiri">صَدَّقَ</span> – to be truthful</p>
+            <p><span class="ar-huruf amiri">كَذَب</span> – to lie</p>
+            <p><span class="ar-huruf amiri">كرَّم</span> – to honour</p>
+            <p><span class="ar-huruf amiri">دَرَّس</span> – to teach</p>
+            <p><span class="ar-huruf amiri">عَلَّم</span> – to teach</p>
+            <p>&nbsp;</p>
+            </td>
+            <td colspan="1"><span class="ar-huruf amiri" style="font-size:2.32em; line-height:1.5em;">الرَّحْمَٰنُ</span> <u><span class="ar-huruf amiri" style="font-size:2.32em; line-height:1.5em;">عَلَّمَ</span></u> <span class="ar-huruf amiri" style="font-size:2.32em; line-height:1.5em;">الْقُرْآنَ</span><p></p>
+            <p>The Most Merciful <u>Taught</u> the Qur’an. [55:1-2]</p></td>
+        </tr>
+        </tbody>
+      </table>
+      <span class="ar-huruf amiri">
+      جَوَّل
+      حَسَّنَ
+      </span>
+    </main>
+
+    <footer>
+      <p>QUILL schedule. 2020</p>
+    </footer>
+    <script>
+      function openNav()  { document.getElementById("mySidenav").style.width = "250px"; }
+      function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+    </script>
+
+    <script src="about.js"></script>
+  </body>
+</html>

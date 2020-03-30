@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PWAQuill</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    <link rel="icon" type="image/png" href="../img/icons/favicon.png" />
+
+    <!-- 0a. JS -->
+    <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+    <!-- online jquery.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script><!-- online handlebars.js-->
+
+    <meta name="theme-color" content="#2A3443" />
+    <meta name="description" content="PWA Tutorial Application for a fictional conference."
+    />
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="./img/icons/icon-144x144.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-title" content="PWAConf" />
+    <link rel="manifest" href="./manifest.json">
+
+    <style>
+      img { width:200px; }
+      a {
+       color: #0084b4;
+       text-decoration:none;
+      }
+      a:hover { text-decoration : underline; }
+
+      div#anchor { width: 100%; padding-top: 100px;}
+      div#anchor:hover {
+        /* padding: 12px; -- padding + border = 16px */
+        border: 1px solid #ddd;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href='#' onclick="dspPageSection('#home')">Home</a>
+      <a href='#' onclick="dspPageSection('#speakers')">Speakers</a>
+      <a href='#' onclick="dspPageSection('#schedule')">Schedule</a>
+      <a href='./pages/code-of-conduct.html'>CoC</a>
+      <a href='./pages/about.html'>About</a>
+    </div>
+
+    <header>
+      <h1>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        QUILL
+      </h1>
+      <nav>
+        <!--
+        <a href="../index.html">&lt;</a>
+        <a href="#about">ABOUT</a>
+        -->
+      </nav>
+    </header>
+
+    <div class="alert" role="alert" hidden>
+      Your browser does not support ServiceWorker. The app will not be available
+      offline.
+    </div>
+
+    <main>
+
+    <!--1. Data (json format!) -->
+    <script>
+    var url='./data/blogdata.json'; // relative url : 'data.json'; protocole-relative absolute url: '//website.org/path/to/data.json';
+    </script>
+
+    <!-- 2. Anchor -->
+    <div id="anchor">This div is the <b>#anchor</b>.</div>
+
+    <!-- 3. Template -->
+    <script id="tpl" type="text/template">
+        {{#people}}
+            <div><img src="../img/bloggers/{{photo}}"><b><a href="{{twitter}}">{{family}} {{name}}</a></b> — {{title}}, {{place}} : {{introduction}}.</div>
+        {{/people}}
+    </script>
+
+    <!--4. Handlebars.js slingshot -->
+    <script>
+    //4a.function creation
+    var slingshot = function (url, tplId, anchor) {
+     $.getJSON(url, function(data) {
+              var template = $(tplId).html();
+              var stone = Handlebars.compile(template)(data);
+              $(anchor).append(stone);
+     });
+  }
+    //4b.function firing
+    slingshot('data.json', '#tpl', '#anchor'); // since url = 'data.json' , we can use both notations.
+    </script>
+
+
+    </main>
+
+    <footer>
+      <p>QUILL schedule. 2020</p>
+    </footer>
+    <script>
+      function openNav()  { document.getElementById("mySidenav").style.width = "250px"; }
+      function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+    </script>
+
+    <script src="about.js"></script>
+  </body>
+</html>
