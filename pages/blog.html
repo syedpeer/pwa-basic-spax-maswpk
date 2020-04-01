@@ -45,11 +45,13 @@
   <body>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href='#' onclick="dspPageSection('#home')">Home</a>
-      <a href='#' onclick="dspPageSection('#speakers')">Speakers</a>
-      <a href='#' onclick="dspPageSection('#schedule')">Schedule</a>
-      <a href='./pages/code-of-conduct.html'>CoC</a>
-      <a href='./pages/about.html'>About</a>
+      <a href='#' onclick="goPageSection('../index.html', '')">Home</a>
+      <a href='#' onclick="goPageSection('../index.html', '#speakers')">Speakers</a>
+      <a href='#' onclick="goPageSection('../index.html', '#schedule')">Schedule</a>
+      <a href='#' onclick="goPageSection('../index.html', '#code-of-conduct')">CoC</a>
+      <a href='#' onclick="goPageSection('../index.html', '#about')">About</a>
+      <a href='../pages/blog.html'>Blog</a>
+      <a href='../pages/arabic.html'>Arabic</a>
     </div>
 
     <header>
@@ -57,12 +59,12 @@
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         QUILL
       </h1>
+      <!--
       <nav>
-        <!--
         <a href="../index.html">&lt;</a>
         <a href="#about">ABOUT</a>
-        -->
       </nav>
+      -->
     </header>
 
     <div class="alert" role="alert" hidden>
@@ -74,11 +76,11 @@
 
     <!--1. Data (json format!) -->
     <script>
-    var url='./data/blogdata.json'; // relative url : 'data.json'; protocole-relative absolute url: '//website.org/path/to/data.json';
+    var url='../data/data.json'; // relative url : 'data.json'; protocole-relative absolute url: '//website.org/path/to/data.json';
     </script>
 
     <!-- 2. Anchor -->
-    <div id="anchor">This div is the <b>#anchor</b>.</div>
+    <div id="anchor">This div is really the only real <b>#anchor</b>.</div>
 
     <!-- 3. Template -->
     <script id="tpl" type="text/template">
@@ -98,7 +100,14 @@
      });
   }
     //4b.function firing
-    slingshot('data.json', '#tpl', '#anchor'); // since url = 'data.json' , we can use both notations.
+    slingshot('../data/data.json', '#tpl', '#anchor'); // since url = 'data.json' , we can use both notations.
+
+    function goPageSection(pageName, sectName){
+      //resetAllSections();
+      window.location.href = pageName + sectName;
+      //document.querySelector(sectName).style.display = "block";
+    }
+
     </script>
 
 

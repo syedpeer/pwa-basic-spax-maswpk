@@ -41,6 +41,11 @@
         document.querySelector(sectName).style.display = "block";
       }
 
+      function jmpPageSection(sectName){
+        document.querySelector(sectName).style.display = "block";
+      }
+
+
       function resetAllSections(){
         document.querySelector("#home").style.display = "none";
         document.querySelector("#speakers").style.display = "none";
@@ -64,8 +69,8 @@
       <a href='#' onclick="dspPageSection('#schedule')">Schedule</a>
       <a href='#' onclick="dspPageSection('#code-of-conduct')">CoC</a>
       <a href='#' onclick="dspPageSection('#about')">About</a>
-      <a href='./pages/blog.html' >Blog</a>
-      <a href='./pages/arabic.html' >Arabic</a>
+      <a href='./pages/blog.html'>Blog</a>
+      <a href='./pages/arabic.html'>Arabic</a>
     </div>
 
     <header>
@@ -160,6 +165,13 @@
     <script>
       function openNav()  { document.getElementById("mySidenav").style.width = "250px"; }
       function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+
+      if (window.location.hash) {
+        console.log(window.location.hash);
+        dspPageSection(window.location.hash);
+        setTimeout("hideShowSection(window.location.hash)", 300);
+      }
+
     </script>
 
   <script type="text/javascript" src="main.js"></script></body>
