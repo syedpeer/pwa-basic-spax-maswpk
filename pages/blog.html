@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>PWAQuill</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 
     <link rel="icon" type="image/png" href="../img/icons/favicon.png" />
@@ -103,19 +106,18 @@
     slingshot('../data/data.json', '#tpl', '#anchor'); // since url = 'data.json' , we can use both notations.
 
     function goPageSection(pageName, sectName){
-      //resetAllSections();
       window.location.href = pageName + sectName;
-      //document.querySelector(sectName).style.display = "block";
     }
 
     </script>
 
-
     </main>
 
     <footer>
-      <p>QUILL schedule. 2020</p>
+      <a href="../index.html" class="w3-bar-item w3-button">
+          <i class="fa fa-home fa-lg"></i></a>
     </footer>
+
     <script>
       function openNav()  { document.getElementById("mySidenav").style.width = "250px"; }
       function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
