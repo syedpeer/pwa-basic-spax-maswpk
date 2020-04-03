@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PWAQuill</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    <link rel="icon" type="image/png" href="../img/icons/favicon.png" />
+
+    <meta name="theme-color" content="#2A3443" />
+    <meta name="description" content="PWA Tutorial Application for a fictional conference."
+    />
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="./img/icons/icon-144x144.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-title" content="PWAConf" />
+    <link rel="manifest" href="./manifest.json">
+  </head>
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href='#' onclick="dspPageSection('#home')">Home</a>
+      <a href='#' onclick="dspPageSection('#speakers')">Speakers</a>
+      <a href='#' onclick="dspPageSection('#schedule')">Schedule</a>
+      <a href='./pages/code-of-conduct.html'>CoC</a>
+      <a href='./pages/about.html'>About</a>
+    </div>
+
+    <header>
+      <h1>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        QUILL
+      </h1>
+
+    </header>
+
+    <div class="alert" role="alert" hidden>
+      Your browser does not support ServiceWorker. The app will not be available
+      offline.
+    </div>
+
+    <main>
+      <p>
+        Welcome to <b>Resources</b> Page.
+      </p>
+
+      <p>
+        <a href="../data/Employer_Transfer_Application_Form.pdf">Read more info..</a>
+      <p>
+        <a href="https://www.moph.gov.qa/english/Pages/Coronavirus2019.aspx">COVID-19 [Eng]</a>
+      </p>
+      <p>
+        <a href="https://www.moph.gov.qa/arabic/Pages/Coronavirus2019.aspx">COVID-19 [Ar]</a>
+      </p>
+      <p>
+        <a href="https://www.moph.gov.qa/english/Documents/english/howtoprotectfromcoviden.pdf">A</a>
+      </p>
+      <p>
+        <a href="https://www.moph.gov.qa/english/Documents/english/10_WAYS_en.pdf">B</a>
+      </p>
+
+      <p>
+        Yes, Yes, without the oops! Remind me to thank John for a lovely weekend. I gave it a cold? I gave it a virus. A computer virus. Hey, you know how I'm, like, always trying to save the planet? Here's my chance. So you two dig up, dig up dinosaurs? So you two dig up, dig up dinosaurs?
+      </p>
+    </main>
+
+    <footer>
+      <p>QUILL schedule. 2020</p>
+    </footer>
+    <script>
+      function openNav()  { document.getElementById("mySidenav").style.width = "250px"; }
+      function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+    </script>
+
+    <script src="about.js"></script>
+  </body>
+</html>
