@@ -5,6 +5,7 @@
   "main": "app.js",
   "homepage": "http://syedpeer.github.io/pwa-basic-spax-maswpk.git",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server",
     "prod": "npm run webpack -- --env.mode production --env.presets serviceworker",
@@ -15,6 +16,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "resolutions": {
+    "minimist": "^1.2.5"
+  },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
@@ -22,12 +26,13 @@
     "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
+    "minimist": "^1.2.5",
     "rimraf": "^3.0.2",
     "style-loader": "^1.1.3",
-    "webpack": "^4.42.0",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2",
-    "workbox-webpack-plugin": "^5.0.0"
+    "workbox-webpack-plugin": "^5.1.2"
   }
 }
