@@ -77,41 +77,8 @@
 
     <main>
 
-    <!--1. Data (json format!) -->
-    <script>
-    var url='../data/blogdata.json';  
-    // relative url : 'data.json'; protocole-relative absolute url: '//website.org/path/to/data.json';
-    </script>
-
-    <!-- 2. Anchor -->
-    <div id="anchor">This div is really the only real <b>#anchor</b>.</div>
-
-    <!-- 3. Template -->
-    <script id="tpl" type="text/template">
-        {{#people}}
-            <div><img src="../img/bloggers/{{photo}}"><b><a href="{{twitter}}">{{family}} {{name}}</a></b> — {{title}}, {{place}} : {{introduction}}.</div>
-        {{/people}}
-    </script>
-
-    <!--4. Handlebars.js slingshot -->
-    <script>
-    //4a.function creation
-    var slingshot = function (url, tplId, anchor) {
-     $.getJSON(url, function(data) {
-              var template = $(tplId).html();
-              var stone = Handlebars.compile(template)(data);
-              $(anchor).append(stone);
-     });
-  }
-    //4b.function firing
-    slingshot('../data/blogdata.json', '#tpl', '#anchor');
-    // since url = 'data.json' , we can use both notations.
-
-    function goPageSection(pageName, sectName){
-      window.location.href = pageName + sectName;
-    }
-
-    </script>
+      <news-list data-api-url="https://newsapi.org/v2/top-headlines?country=us&q=covid&apiKey=27844c7a0ee94b4a8d31fe4317283473&pageSize=5">
+      </news-list>
 
     </main>
 
@@ -125,6 +92,7 @@
       function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
     </script>
 
-    <script src="about.js"></script>
+    <script  src="./news.js"></script>
+    <script src="../js/utility.js"></script>
   </body>
 </html>

@@ -79,7 +79,8 @@
 
     <!--1. Data (json format!) -->
     <script>
-    var url='../data/data.json'; // relative url : 'data.json'; protocole-relative absolute url: '//website.org/path/to/data.json';
+    var url='../data/blogdata.json';  
+    // relative url : 'data.json'; protocole-relative absolute url: '//website.org/path/to/data.json';
     </script>
 
     <!-- 2. Anchor -->
@@ -103,7 +104,8 @@
      });
   }
     //4b.function firing
-    slingshot('../data/data.json', '#tpl', '#anchor'); // since url = 'data.json' , we can use both notations.
+    slingshot('../data/blogdata.json', '#tpl', '#anchor');
+    // since url = 'data.json' , we can use both notations.
 
     function goPageSection(pageName, sectName){
       window.location.href = pageName + sectName;
