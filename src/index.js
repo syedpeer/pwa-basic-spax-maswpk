@@ -30,14 +30,30 @@ class PWAConfApp {
 
   async loadSchedule() {
     //const rawSchedule = await this.fetchJSON('./schedule.json');
+    //const rawSchedule = await this.fetchJSON('https://raw.githubusercontent.com/syedpeer/MyFiles/master/schedule.json');
+
     const rawSchedule = (await import('./data/schedule.json')).default;
 
+    //const rawSchedule = (await fetch('https://github.com/syedpeer/MyFiles/blob/master/schedule.json?raw=tue')).default;
+    //https://raw.githubusercontent.com/syedpeer/MyFiles/master/schedule.json
+    //https://github.com/syedpeer/MyFiles/blob/master/schedule.json?raw=tue
+    //
     // Add speaker details to array
     this.schedule = rawSchedule.map(this.addSpeakerDetails, this);
     this.scheduleDiv.innerHTML = this.schedule
       .map(this.toScheduleBlock)
       .join('\n');
   }
+
+/*
+  async getJSON(path, callback) {
+      return callback(await fetch(path).then(r => r.json()));
+  }
+
+  getJSON('https://raw.githubusercontent.com/syedpeer/MyFiles/master/schedule.json', info => console.log(info.title));
+  */
+
+
 
   toSpeakerBlock(speaker) {
     return `
