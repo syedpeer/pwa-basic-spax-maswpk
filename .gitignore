@@ -4,6 +4,7 @@
 # Ignore folders
 node_modules
 pdf
+iOS
 
 # Ignore production
 # dist
