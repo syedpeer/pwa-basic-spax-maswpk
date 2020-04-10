@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
     <title>PWAQuill</title>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -28,7 +28,7 @@
     <meta name="mobile-web-app-title" content="PWAConf" />
     <link rel="manifest" href="./manifest.json">
 
-    <style>
+    <style> 
 
     .myframe {
       -webkit-overflow-scrolling: touch;
@@ -41,8 +41,26 @@
       bottom: 60px;
     }
 
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
 
     </style>
+
+    <script type="text/javascript">
+      function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }      
+    </script>
   </head>
 
   <body>
@@ -77,13 +95,22 @@
 
     <main>
 
-    <script type="text/javascript">
-      //https://www.moph.gov.qa/english/Pages/Coronavirus2019.aspx
-      //https://pwa-builder.io/
-    </script>
-
     <div class="myframe">
-      <iframe src="https://www.moph.gov.qa/english/Pages/Coronavirus2019.aspx" style="width:100%;height:100%;border: none;"></iframe>
+      <script type="text/javascript">
+        /*
+        var foo = getParameterByName('foo'); // "lorem"
+        console.log(foo);
+        console.log('<iframe src=\"' + foo + '\">'); 
+
+        document.write('<iframe src=\"' + foo + '\">');
+        document.write('</iframe>');
+        */
+      </script>      
+
+
+      <iframe src="https://www.moph.gov.qa/arabic/Pages/Coronavirus2019.aspx"></iframe>
+
+
     </div>
 
     </main>
