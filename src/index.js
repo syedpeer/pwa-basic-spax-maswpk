@@ -14,6 +14,7 @@ class PWAConfApp {
     document.querySelector("#speakers").style.display = "none";
     document.querySelector("#schedule").style.display = "none";
     document.querySelector("#code-of-conduct").style.display = "none";
+    document.querySelector("#videos").style.display = "none";
     document.querySelector("#about").style.display = "none";
 
     this.registerSW();

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>QUILLConf</title>
 
     <link rel="manifest" href="./manifest.webmanifest" />
@@ -27,41 +28,22 @@
       .mr-3, .mx-3 {
         margin-right: 1rem !important;
       }
+
+      a {
+        text-decoration: none;
+      }
+      
+      iframe {
+        width: 100%    !important;
+        /* height: auto   !important; */
+      }      
     </style>
 
+    <script src="../js/utility.js"></script>      
+
     <script>
-      function hideShowSection(sectName){
-        var elem = document.querySelector(sectName);
-        if (elem.style.display === "none") {
-          elem.style.display = "block";
-        } else {
-          elem.style.display = "none";
-        }
-      }
-
-      function dspPageSection(sectName){
-        resetAllSections();
-        document.querySelector(sectName).style.display = "block";
-      }
-
-      function jmpPageSection(sectName){
-        document.querySelector(sectName).style.display = "block";
-      }
-
-
-      function resetAllSections(){
-        document.querySelector("#home").style.display = "none";
-        document.querySelector("#speakers").style.display = "none";
-        document.querySelector("#schedule").style.display = "none";
-        document.querySelector("#code-of-conduct").style.display = "none";
-        document.querySelector("#about").style.display = "none";
-      }
-
-      function removeElement() {
-        document.getElementById("imgbox1").style.display = "none";
-      }
-
     </script>
+
   </head>
 
   <body>
@@ -71,9 +53,10 @@
       <a href='#' class="fa fa-users mr-3" onclick="dspPageSection('#speakers')"> Speakers</a>
       <a href='#' class="fa fa-calendar mr-3" onclick="dspPageSection('#schedule')"> Schedule</a>
       <a href='#' class="fa fa-briefcase mr-3" onclick="dspPageSection('#code-of-conduct')"> CoC</a>
+      <a href='#' class="fa fa-paper-plane mr-3" onclick="dspPageSection('#videos')"> Videos</a>
       <a href='#' class="fa fa-paper-plane mr-3" onclick="dspPageSection('#about')"> About</a>
       <a href='./pages/blog.html' class="fa fa-sticky-note mr-3" > Blog</a>
-      <a href='./pages/arabic.html' class="fa fa-paper-plane mr-3" > Arabic</a>
+      <a href='./pages/arabic.html'>&#x0642; &nbsp;Arabic</a>
       <a href='./pages/resources.html' class="fa fa-suitcase mr-3" > Resources</a>
       <a href='./pages/blogvideos.html' class="fa fa-suitcase mr-3" > Videos</a>
       <a href='./pages/news.html' class="fa fa-newspaper-o mr-3" > News</a>
@@ -87,14 +70,18 @@
       </h1>
     </header>
 
-    <div class="scrollmenu">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#support">Support</a>
-      <a href="#blog">Blog</a>
-      <a href="#tools">Tools</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+    <div id="myHorznav" class="scrollmenu">
+      <a href='#' class="fa fa-home mr-3" onclick="dspPageSection('#home')"> Home</a>
+      <a href='#' class="fa fa-users mr-3" onclick="dspPageSection('#speakers')"> Speakers</a>
+      <a href='#' class="fa fa-calendar mr-3" onclick="dspPageSection('#schedule')"> Schedule</a>
+      <a href='#' class="fa fa-briefcase mr-3" onclick="dspPageSection('#code-of-conduct')"> Coc</a>
+      <a href='#' class="fa fa-television mr-3" onclick="dspPageSection('#videos')"> Videos</a>
+      <a href='./pages/blog.html' class="fa fa-sticky-note mr-3" > Blog</a>
+      <a href='./pages/arabic.html'>&#x0642; &nbsp;Arabic</a>
+      <a href='./pages/resources.html' class="fa fa-suitcase mr-3" > Resources</a>                
+      <a href='./pages/news.html' class="fa fa-newspaper-o mr-3" > News</a>      
+      <a href='#' class="fa fa-phone mr-3" onclick="dspPageSection('#code-of-conduct')"> Contact</a>
+      <a href='#' class="fa fa-paper-plane mr-3" onclick="dspPageSection('#about')"> About</a>      
     </div>
 
     <!-- <nav>
@@ -126,6 +113,7 @@
         <button onclick="hideShowSection('#speakers')">speakers</button>
         <button onclick="hideShowSection('#schedule')">schedule</button>
         <button onclick="hideShowSection('#code-of-conduct')">COC</button>
+        <button onclick="hideShowSection('#videos')">Videos</button>
         <button onclick="resetAllSections()">Reset</button>
       </p>
 
@@ -149,15 +137,37 @@
         </p>
       </section>
 
+
+      <section id="videos">
+        <h2>Videos</h2>     
+        <p>
+          <div style="--aspect-ratio: 16/9;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </p>
+
+        <p>
+          <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+          </iframe>          
+        </p>
+
+        <p>
+          <div style="--aspect-ratio: 16/9;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WisZM9CMlTo" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </p>
+
+      </section>
+
       <section id="about">
         <p>
-          Welcome to About Page for <b>QUILL</b> in sunny Qatar.
+          Welcome to <b>About</b> Page.
         </p>
         <p>
-          They're using our own satellites against us. And the clock is ticking. Is this my espresso machine? Wh-what is-h-how did you get my espresso machine? Hey, you know how I'm, like, always trying to save the planet? Here's my chance. Did he just throw my cat out of the window?
+          This application allows QAFCO senior management to provide valuable infotmation to staff and QAFCO Teams during the COVID-19 Crisis. 
         </p>
         <p>
-          Yes, Yes, without the oops! Remind me to thank John for a lovely weekend. I gave it a cold? I gave it a virus. A computer virus. Hey, you know how I'm, like, always trying to save the planet? Here's my chance. So you two dig up, dig up dinosaurs? So you two dig up, dig up dinosaurs?
+          This Application will provide timely updates, informationa and directives from Senior Management as the crisis progressins. Be sure to chcek back regularly for the latest information. 
         </p>
       </section>
 
@@ -179,7 +189,7 @@
         setTimeout("hideShowSection(window.location.hash)", 300);
       }
 
-    </script>
+    </script>  
 
   </body>
 </html>
