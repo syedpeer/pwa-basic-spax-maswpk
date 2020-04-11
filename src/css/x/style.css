@@ -842,6 +842,9 @@ a:focus {
 /* end info section */
 /* footer section*/
 .footer_section {
+  position: fixed;
+  left: 0;
+  bottom: 0;  
   background-color: #8547ca;
   padding: 20px;
 }

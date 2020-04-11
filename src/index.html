@@ -43,15 +43,12 @@
       }
 
       .bodyx {
-        background-image: url('../img/backgrounds/books-on-desk.jpeg');
+        background-image: url('../img/backgrounds/uxos');
         background-position: 0px 0px; 
       }
     </style>
 
-    <script src="../js/utility.js"></script>      
-
-    <script>
-    </script>
+    <script src="../js/utility.js"></script>
 
   </head>
 
@@ -61,9 +58,9 @@
       <a href='#' class="fa fa-home mr-3" onclick="dspPageSection('#home')"> Home</a>
       <a href='#' class="fa fa-users mr-3" onclick="dspPageSection('#speakers')"> Speakers</a>
       <a href='#' class="fa fa-calendar mr-3" onclick="dspPageSection('#schedule')"> Schedule</a>
-      <a href='#' class="fa fa-briefcase mr-3" onclick="dspPageSection('#code-of-conduct')"> CoC</a>
-      <a href='#' class="fa fa-paper-plane mr-3" onclick="dspPageSection('#videos')"> Videos</a>
-      <a href='#' class="fa fa-paper-plane mr-3" onclick="dspPageSection('#about')"> About</a>
+      <a href='#' class="fa fa-gavel mr-3" onclick="dspPageSection('#code-of-conduct')"> CoC</a>
+      <a href='#' class="fa fa-television mr-3" onclick="dspPageSection('#videos')"> Videos</a>
+      <a href='#' class="fa fa-info-circle mr-3" onclick="dspPageSection('#about')"> About</a>
       <a href='./pages/blog.html' class="fa fa-sticky-note mr-3" > Blog</a>
       <a href='./pages/arabic.html'>&#x0642; &nbsp;Arabic</a>
       <a href='./pages/resources.html' class="fa fa-suitcase mr-3" > Resources</a>
@@ -84,14 +81,14 @@
       <a href='#' class="fa fa-home mr-3" onclick="dspPageSection('#home')"> Home</a>
       <a href='#' class="fa fa-users mr-3" onclick="dspPageSection('#speakers')"> Speakers</a>
       <a href='#' class="fa fa-calendar mr-3" onclick="dspPageSection('#schedule')"> Schedule</a>
-      <a href='#' class="fa fa-briefcase mr-3" onclick="dspPageSection('#code-of-conduct')"> Coc</a>
+      <a href='#' class="fa fa-gavel mr-3" onclick="dspPageSection('#code-of-conduct')"> Coc</a>
       <a href='#' class="fa fa-television mr-3" onclick="dspPageSection('#videos')"> Videos</a>
       <a href='./pages/blog.html' class="fa fa-sticky-note mr-3" > Blog</a>
       <a href='./pages/arabic.html'>&#x0642; &nbsp;Arabic</a>
-      <a href='./pages/resources.html' class="fa fa-suitcase mr-3" > Resources</a>                
+      <a href='./pages/resources.html' class="fa fa-link mr-3" > Resources</a>                
       <a href='./pages/news.html' class="fa fa-newspaper-o mr-3" > News</a>
       <a href='./pages/contact.html' class="fa fa-phone mr-3" > Contact</a>
-      <a href='#' class="fa fa-paper-plane mr-3" onclick="dspPageSection('#about')"> About</a>      
+      <a href='#' class="fa fa-info-circle mr-3" onclick="dspPageSection('#about')"> About</a>      
     </div>
 
     <!-- <nav>
@@ -107,25 +104,28 @@
     <main>
 
       <section id="home">
-        <p>
-          Welcome to PWA NET, the premier hosted PWA in the world! The
-          conference is held <b>September 13-14</b> in sunny Santa Cruz, CA.
-        </p>
+        <div style="background-image: url('../img/backgrounds/uxos.png');">
+          <p>
+            Welcome to PWA NET, the premier hosted PWA in the world! The
+            conference is held <b>September 13-14</b> in sunny Santa Cruz, CA.
+          </p>
 
-        <p>
-          The conference is a single day, single track event focused on building
-          kick-ass user experiences on the web.
+          <p>
+            The conference is a single day, single track event focused on building
+            kick-ass user experiences on the web.
         </p>
+        </div>
       </section>
 
-      <p>
-        <!-- <a href="#" onclick="hideShowSpeakers(); return false;">LINK</a> -->
-        <button onclick="hideShowSection('#speakers')">speakers</button>
-        <button onclick="hideShowSection('#schedule')">schedule</button>
-        <button onclick="hideShowSection('#code-of-conduct')">COC</button>
-        <button onclick="hideShowSection('#videos')">Videos</button>
-        <button onclick="resetAllSections()">Reset</button>
-      </p>
+      <section id="buttons"> 
+        <p>
+          <button onclick="hideShowSection('#speakers')">speakers</button>
+          <button onclick="hideShowSection('#schedule')">schedule</button>
+          <button onclick="hideShowSection('#code-of-conduct')">COC</button>
+          <button onclick="hideShowSection('#videos')">Videos</button>
+          <button onclick="resetAllSections()">Reset</button>
+        </p>
+      </section>
 
       <section id="speakers">
         <h2>Speakers</h2>
@@ -149,17 +149,25 @@
 
 
       <section id="videos">
-        <h2>Videos</h2>     
+        <h2>Videos</h2>
+
+        <video controls="true">
+          <source src="www.youtube.com/watch?v=3bGNuRtlqAQ" type="video/mp4" />
+        </video>
+
+        <video tabindex="-1" class="video-stream html5-main-video" controlslist="nodownload" src="https://www.youtube.com/cd0db841-60c0-4578-bce3-3d2ba5309e2a" style="width: 465px; height: 262px; left: 0px; top: 0px;"></video>
+
+
         <p>
           <div style="--aspect-ratio: 16/9;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://youtu.be/1APwq1df6Mw" frameborder="0" allowfullscreen></iframe>
           </div>
         </p>
 
-        <p>
+<!--         <p>
           <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
           </iframe>          
-        </p>
+        </p> -->
         
         <h3>Al Jazeera English</h3>
         <p>
@@ -179,15 +187,14 @@
       </section>
 
       <section id="about">
-        <p>
-          Welcome to <b>About</b> Page.
-        </p>
-        <p>
-          This application allows QAFCO senior management to provide valuable infotmation to staff and QAFCO Teams during the COVID-19 Crisis. 
-        </p>
-        <p>
-          This Application will provide timely updates, informationa and directives from Senior Management as the crisis progressins. Be sure to chcek back regularly for the latest information. 
-        </p>
+        <div style="text-align: justify;">        
+          <p>
+            This mobile application allows QAFCO senior management to provide valuable infotmation to staff and QAFCO Teams during the COVID-19 Crisis. 
+          </p>
+          <p>
+            This Application will provide timely updates, informationa and directives from Senior Management as the crisis progressins. Be sure to chcek back regularly for the latest information. 
+          </p>
+        </div>        
       </section>
 
     </main>
@@ -195,10 +202,15 @@
     <footer>
       <!-- <p>QUILL schedule. 2020</p> -->
       <a href="./index.html" class="w3-bar-item w3-button"><i class="fa fa-home fa-lg"></i></a>
-      <a href='#' class="fa fa-users mr-3" onclick="dspPageSection('#speakers')"></a>
+      <!-- <a href='#' class="fa fa-users mr-3" onclick="dspPageSection('#speakers')"></a> -->
     </footer>
 
     <script>
+      resetAllSections()
+      hideShowSection('#home');
+      hideShowSection('#buttons');
+
+
       function openNav()  { document.getElementById("mySidenav").style.width = "250px"; }
       function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
 

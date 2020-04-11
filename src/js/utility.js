@@ -29,3 +29,26 @@ function jmpPageSection(sectName){
 function removeElement() {
   document.getElementById("imgbox1").style.display = "none";
 }
+
+var n = 1
+
+function abc(param)
+{
+  var step = 2;
+  var innerHtml = '';
+  if(n>0){
+    if (step == '1') {
+      innerHtml = `
+          <div class="box" style="background-color:red" id="prodcolor">
+           <span style="display:none"> Sample</span>
+          </div>
+      `;
+    }
+    return `
+        <div>
+        ${innerHtml}
+        </div>
+    `;
+
+  }
+}
