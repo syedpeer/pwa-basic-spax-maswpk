@@ -22,6 +22,9 @@
     <meta name="mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-title" content="PWAConf" />
     <link rel="manifest" href="./manifest.json">
+
+    <script src="../js/utility.js"></script>
+
   </head>
 
   <style type="text/css">
@@ -85,13 +88,22 @@
       -->
     </header>
 
+    <div id="myHorznav" class="scrollmenu">
+      <a href='#' class="fa fa-home mr-3" onclick="goPageSection('../index.html', '')"> Home</a>
+      <a href='#' class="fa fa-question mr-3" onclick="goPageSection('../index.html', '#faq')"> FAQ</a>
+      <a href='#' class="fa fa-link mr-3" > Resources</a>                
+      <a href='../pages/news.html' class="fa fa-newspaper-o mr-3" > News</a>
+      <a href='#' class="fa fa-phone mr-3" onclick="goPageSection('../index.html', '#contact')"> Contact</a>
+      <a href='#' class="fa fa-info-circle mr-3" onclick="goPageSection('../index.html', '#about')"> About</a>
+    </div>
+
     <div class="alert" role="alert" hidden>
       Your browser does not support ServiceWorker. The app will not be available
       offline.
     </div>
 
     <main>
-      <h2>Resources</h2>
+      <h3>Resources</h3>
 
       <div class="divTitle">
           <h3>Qatar Ministry of Public Health</h3> 
@@ -142,7 +154,7 @@
       </p>
       -->
 
-      <div class="divTitle">
+<!--       <div class="divTitle">
         <h3>Informational</h3>
       </div>
 
@@ -174,7 +186,7 @@
         <div class="videoWrapper" style="--aspect-ratio: 16/9;">
           <iframe src="http://www.youtube.com/embed/n_dZNLr2cME" frameborder="0" allowfullscreen></iframe>
         </div>   
-      </p>
+      </p> -->
 
 
 <!--       <p>
@@ -199,7 +211,6 @@
 
     <footer>
       <a href="../index.html" class="w3-bar-item w3-button"><i class="fa fa-home fa-lg"></i></a>
-      <a href='#' class="fa fa-users mr-3" onclick="dspPageSection('#speakers')"></a>
     </footer>
 
     <script>

@@ -63,7 +63,7 @@ customElements.define("news-list", class extends HTMLElement {
       // Re-render any time an attribute is updated
       attributeChangedCallback(attrName, oldVal, newVal) {
         this.render();
-      }
+      } 
 
       // Render lifecycle hook
       render() {
@@ -74,15 +74,22 @@ customElements.define("news-list", class extends HTMLElement {
           <style>
             .story { display: block; margin-bottom: 15px; }
             .story img { width: 100px; height: auto; }
+            img { width: 90vw; height: auto;}
+            a { text-decoration: none; }
           </style>
           <div>
             <h3>News Feed</h3>
             ${this.stories.articles.map((story) => {
               return `
+                <img src="${story.urlToImage}" />
                 <a class="story" href="${story.url}" target="blank">
-                  <div class="story__title">${story.title}</div>
-                  <div class="story__source">Source: ${story.source.name}</div>
-                  <img src="${story.urlToImage}" />
+                  <div class="story__title">
+                    ${story.title}
+                  </div>
+                  <div class="story__source">
+                    Source: ${story.source.name}
+                  </div>
+                  <img src="" />
                 </a>
               `;
             }).join("")}

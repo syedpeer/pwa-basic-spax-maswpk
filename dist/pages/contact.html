@@ -14,19 +14,19 @@
 
   <title>UXOS</title>
 
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,700%7CRaleway:400,700&amp;display=swap" rel="stylesheet" />
+
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,700%7CRaleway:400,700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../css/x/bootstrap.css" />
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="../css/x/style.css" rel="stylesheet"  type="text/css" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="../css/x/responsive.css" rel="stylesheet"  type="text/css" />
 
   <style type="text/css">
     
@@ -35,6 +35,7 @@
     }
 
   </style>
+
 </head>
 
 <body class="sub_page">
@@ -59,8 +60,8 @@
             </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="index.html">HOME</a>
-                <a href="about.html">ABOUT</a>
+                <a href="../index.html" >HOME</a>
+                <a href="" onclick="dspPageSection('#about')">ABOUT</a>
                 <a href="feature.html">FEATURE</a>
                 <a href="contact.html">CONTACT US</a>
               </div>
@@ -116,7 +117,7 @@
             <img src="../img/backgrounds/uxos-bg.png" alt="">
           </div>
         </div> -->
-        
+
       </div>
     </div>
   </section>
@@ -129,17 +130,24 @@
 
 
   <!-- footer section -->
-  <section class="container-fluid footer_section">
+<!--   <section class="container-fluid footer_section">
     <p>
-      &copy; <span id="displayYear"></span> All Rights Reserved. Design by
-      <a href="../../index.html">Free Html Templates</a>
+      &copy; <span id="displayYear"></span> All Rights Reserved.
     </p>
-  </section>
+  </section> -->
   <!-- footer section -->
+  <footer>
+    <!-- <p>QUILL schedule. 2020</p> -->
+    <a href="./index.html" class="w3-bar-item w3-button"><i class="fa fa-home fa-lg"></i></a>
+    <!-- <a href='#' class="fa fa-users mr-3" onclick="dspPageSection('#speakers')"></a> -->
+  </footer>
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
+
+  <script src="../js/utility.js"></script>
+
+  <script type="text/javascript" src="../js/x/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../js/x/bootstrap.js"></script>
+  <script type="text/javascript" src="../js/x/custom.js"></script>
 </body>
 
 </html>
