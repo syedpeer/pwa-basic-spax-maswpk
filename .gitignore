@@ -11,6 +11,7 @@ iOS
 
 # Ignore all text files
 *.txt
+*.psd
 
 # Ignore files related to API keys
 .env
