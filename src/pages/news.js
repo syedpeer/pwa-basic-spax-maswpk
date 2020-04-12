@@ -73,8 +73,8 @@ customElements.define("news-list", class extends HTMLElement {
           this.shadowRoot.innerHTML = `
           <style>
             .story { display: block; margin-bottom: 15px; }
-            .story img { width: 100px; height: auto; }
-            img { width: 90vw; height: auto;}
+            .story img { width: 100px; height: auto; border-radius: 25px;}
+            img { width: 90vw; height: auto; }
             a { text-decoration: none; }
           </style>
           <div>
@@ -93,7 +93,7 @@ customElements.define("news-list", class extends HTMLElement {
                 </a>
               `;
             }).join("")}
-            <button id="load-more">Load More</button>
+            <!-- <button id="load-more">Load More</button> -->
           </div>
         `;
         }
