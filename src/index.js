@@ -4,18 +4,23 @@ class PWAConfApp {
   constructor() {
     this.speakersDiv = document.querySelector('.speakers');
     this.scheduleDiv = document.querySelector('.schedule');
+    this.faqDiv = document.querySelector('.faq');
     this.init();
   }
 
   async init() {
     await this.loadSpeakers();
     this.loadSchedule();
+    this.loadFaq();
 
     document.querySelector("#speakers").style.display = "none";
     document.querySelector("#schedule").style.display = "none";
     document.querySelector("#code-of-conduct").style.display = "none";
     document.querySelector("#videos").style.display = "none";
-    document.querySelector("#about").style.display = "none";
+
+    document.querySelector("#faq").style.display = "none";
+    document.querySelector("#resources").style.display = "none";
+    document.querySelector("#about").style.display = "none";    
 
     this.registerSW();
   }
@@ -42,6 +47,23 @@ class PWAConfApp {
     // Add speaker details to array
     this.schedule = rawSchedule.map(this.addSpeakerDetails, this);
     this.scheduleDiv.innerHTML = this.schedule
+      .map(this.toScheduleBlock)
+      .join('\n');
+  }
+
+  async loadFaq() {
+    //const rawSchedule = await this.fetchJSON('./schedule.json');
+    //const rawSchedule = await this.fetchJSON('https://raw.githubusercontent.com/syedpeer/MyFiles/master/schedule.json');
+
+    const rawFaq = (await import('./data/faq.json')).default;
+
+    //const rawSchedule = (await fetch('https://github.com/syedpeer/MyFiles/blob/master/schedule.json?raw=tue')).default;
+    //https://raw.githubusercontent.com/syedpeer/MyFiles/master/schedule.json
+    //https://github.com/syedpeer/MyFiles/blob/master/schedule.json?raw=tue
+    //
+    // Add speaker details to array
+    this.faq = rawFaq.map(this.addSpeakerDetails, this);
+    this.faqDiv.innerHTML = this.faq
       .map(this.toScheduleBlock)
       .join('\n');
   }
