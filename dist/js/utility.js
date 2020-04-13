@@ -12,6 +12,9 @@ function resetAllSections(){
 }
 
 function hideShowSection(sectName){
+
+  //console.log("" + sectName);
+
   var elem = document.querySelector(sectName);
   if (elem.style.display === "none") {
     elem.style.display = "block";
