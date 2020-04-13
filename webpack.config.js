@@ -23,7 +23,8 @@ module.exports = ({ mode, presets }) => {
             { from: './src/js',  to: 'js/'  },
             { from: './src/css', to: 'css/' },
             { from: './src/data', to: 'data/' },
-            { from: './src/pages', to: 'pages/' },
+            { from: './src/qafco', to: 'qafco/' },
+            { from: './src/pages', to: 'pages/' }, 
             'src/manifest.webmanifest'],
           { ignore: ['.DS_Store'] }
         )
