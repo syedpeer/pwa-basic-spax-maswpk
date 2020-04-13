@@ -42,7 +42,12 @@
         padding-bottom: .1rem;
         background-color: maroon;
         color: white;
-      }       
+      }
+
+      .videoframe {
+        width: 90vw;
+        height: auto;
+      }
 
     </style>
   </head>
@@ -63,6 +68,7 @@
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         COVID-19
       </h1>
+      <img src="../img/icons/logo.png" width="100"/>
       <!--
       <nav>
         <a href="../index.html">&lt;</a>
@@ -88,8 +94,29 @@
 
     <main>
 
-      <news-list data-api-url="https://newsapi.org/v2/top-headlines?country=us&q=covid&apiKey=27844c7a0ee94b4a8d31fe4317283473&pageSize=5">
+      <news-list data-api-url="https://newsapi.org/v2/top-headlines?country=us&q=covid&apiKey=212b76f6a6c5488ba100899ae770eb3f&pageSize=5">
       </news-list>     
+
+<!-- 
+      <div class="divTitle">
+        <h3>LIVE TV</h3>
+      </div>
+
+      <h3>Al Jazeera English</h3>
+      <p>
+        <div style="--aspect-ratio: 3/4;">
+          <iframe class="videoframe" src="https://www.youtube.com/embed/WisZM9CMlTo" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </p>
+
+      <h3>Al Jazeera Arabic</h3>
+
+      <p>
+        <div style="--aspect-ratio: 16/9;">
+          <iframe class="videoframe" src="https://www.youtube.com/embed/ueliG2kthek" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </p> -->
+
 
     </main>
 

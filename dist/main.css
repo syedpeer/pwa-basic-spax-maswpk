@@ -90,6 +90,13 @@ header h1 {
   font-weight: 400;
 }
 
+header img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+}
+
 .alert {
   background: var(--warning-color);
 }
