@@ -74,11 +74,12 @@ customElements.define("news-list", class extends HTMLElement {
           <style>
             .story { display: block; margin-bottom: 15px; }
             .story img { width: 100px; height: auto; border-radius: 25px;}
-            img { width: 90vw; height: auto; }
+            img { width: 90vw; height: auto; border-radius: 15px; }
             a { text-decoration: none; }
+            .divTitle { padding-top: .1rem; padding-bottom: .3rem; background-color: maroon; color: white; } 
           </style>
           <div>
-            <h3>News Feed</h3>
+            <p><div class="divTitle"><h3>&ensp;News Feed</h3></div></p>
             ${this.stories.articles.map((story) => {
               return `
                 <img src="${story.urlToImage}" />
