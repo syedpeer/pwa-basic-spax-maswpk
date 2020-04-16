@@ -4,7 +4,9 @@
 # Ignore folders
 node_modules
 pdf
+psd
 iOS
+iOS-asset-creator
 
 # Ignore production
 # dist
