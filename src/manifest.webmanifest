@@ -1,10 +1,10 @@
 {
-  "name": "PWAQuill",
-  "short_name": "PWAQuill",
+  "name": "COVID-19",
+  "short_name": "COVID-19",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#2A3443",
-  "description": "A demo app for a fictional conference",
+  "description": "QAFCO COVID-19 Communication App",
   "theme_color": "#2A3443",
   "icons": [
     {
