@@ -40,6 +40,8 @@ function goPageSection(pageName, sectName){
   window.location.href = pageName + sectName;
 }
 
+
+
 var n = 1
 
 function abc(param)

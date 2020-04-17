@@ -62,11 +62,22 @@
       }
     </style>
 
+    <script>
+      function resetFooterPosition(sectName) {
+        console.log('Reseting ' + sectName)
+        document.querySelector(sectName).style.position = "fixed";
+        document.querySelector(sectName).style.left = "0";
+        document.querySelector(sectName).style.bottom = "0";
+        document.querySelector(sectName).style.width = "100%";
+      } 
+ 
+    </script>
+
     <script src="../js/utility.js"></script>
 
   </head>
 
-  <body>
+  <body  onload="resetFooterPosition('footer')">
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href='#' class="fa fa-home mr-3" onclick="dspPageSection('#home')"> Home</a>
