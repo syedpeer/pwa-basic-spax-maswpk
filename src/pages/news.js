@@ -68,7 +68,22 @@ customElements.define("news-list", class extends HTMLElement {
       // Render lifecycle hook
       render() {
         if (this.loading) {
-          this.shadowRoot.innerHTML = `Loading...`;
+          //this.shadowRoot.innerHTML = `Loading...`;
+          this.shadowRoot.innerHTML = `
+          <style>
+            img { 
+              width: 25vw; 
+              height: auto; 
+              position:absolute;
+              left:50px; 
+              top:150px;               
+            }
+
+          </style>
+          <div>
+          <img src="../img/icons/loading.gif" />
+          </div>
+          `;
         } else {
           this.shadowRoot.innerHTML = `
           <style>

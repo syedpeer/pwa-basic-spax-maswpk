@@ -3,6 +3,7 @@
 
 # Ignore folders
 node_modules
+src/img/backgrounds
 pdf
 psd
 iOS
