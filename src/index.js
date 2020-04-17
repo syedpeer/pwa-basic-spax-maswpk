@@ -64,7 +64,7 @@ class PWAConfApp {
     // Add speaker details to array
     this.faq = rawFaq.map(this.addSpeakerDetails, this);
     this.faqDiv.innerHTML = this.faq
-      .map(this.toScheduleBlock)
+      .map(this.toFaqBlock)
       .join('\n');
   }
 
@@ -76,8 +76,29 @@ class PWAConfApp {
   getJSON('https://raw.githubusercontent.com/syedpeer/MyFiles/master/schedule.json', info => console.log(info.title));
   */
 
+  //
+  // Freq. Asked Questions
+  //
+  toFaqBlock(faqItem) {
+    return `
+      <div class="schedule-item ${faqItem.category}">
+        <div class="title-and-time">
+          <div class="faqnumber">${faqItem.faqNum}</div>
+          <div class="title-and-speaker">
+            <div class="title">${faqItem.title}</div>
+            <div class="speaker">${
+              faqItem.speaker ? faqItem.speaker.name : '&nbsp;'
+            }</div>
+          </div>
+        </div>
+        <p class="description">${faqItem.description}</p>
+      </div>
+    `;
+  }
 
-
+  //
+  // Schedule details
+  //
   toSpeakerBlock(speaker) {
     return `
         <div class="speaker">

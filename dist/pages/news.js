@@ -103,6 +103,7 @@ customElements.define("news-list", class extends HTMLElement {
                     ${story.title}
                   </div>
                   <div class="story__source">
+                    <br/>
                     Source: ${story.source.name}
                   </div>
                   <img src="" />
