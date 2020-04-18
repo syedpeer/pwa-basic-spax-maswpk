@@ -235,8 +235,11 @@ h2 {
 .faqnumber {
   font-size: 1.5em;
   font-weight: 600;
-  padding-top: 2px;
+  padding: 10px;
   color: red;
+  /* padding-top: 2px; */
+  background: var(--light-background); 
+  /*background: yellow; */
 }
 
 .title-and-speaker {
@@ -248,7 +251,9 @@ h2 {
   font-weight: 600;
   border-bottom: 2px solid var(--dark-color);
   padding-bottom: calc(var(--spacing) / 2);
+  background: var(--light-background);
 }
+
 
 .title-and-speaker .speaker {
   padding-top: calc(var(--spacing) / 2);
@@ -298,7 +303,7 @@ footer {
   font-size: 18px; /* Increase font size */
 }
 
-#myBtn:hover {
+#myBtn:hover-X {
   background-color: #555; /* Add a dark-grey background on hover */
   color:black;
 }
