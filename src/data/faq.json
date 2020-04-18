@@ -3,7 +3,7 @@
     "title": "What is COVID-19?",
     "description":
       "Coronavirus disease (COVID-19) is an infectious disease caused by a new virus.The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing.",
-    "faqNum": "201",
+    "faqNum": "001",
     "speakerId": "",
     "category": "presentation"
   },
@@ -11,7 +11,7 @@
     "title": "What are its symptoms?",
     "description":
       "The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing.",
-    "faqNum": "202",
+    "faqNum": "002",
     "speakerId": "",
     "category": "break"
   },
