@@ -1,4 +1,6 @@
 
+
+
 function resetAllSections(){
 	document.querySelector("#home").style.display = "none";
   document.querySelector("#resources").style.display = "none";  
@@ -26,6 +28,16 @@ function hideShowSection(sectName){
 function dspPageSection(sectName){
   resetAllSections();
   document.querySelector(sectName).style.display = "block";
+  
+  if (sectName === " FAQ"){
+    console.log("FAQ handling..")
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+  }
 }
 
 function jmpPageSection(sectName){

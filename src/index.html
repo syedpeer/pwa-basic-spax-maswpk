@@ -71,6 +71,20 @@
         document.querySelector(sectName).style.width = "100%";
       } 
  
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+
     </script>
 
     <script src="../js/utility.js"></script>
@@ -221,7 +235,10 @@
       <section id="faq">
         <h3>Frequently Asked Questions</h3>
         <br/>
+        <button id="myBtn"><a href="#myHorznav" class="fa fa-arrow-up" style="color:white;"></a></button>
+
         <div class="faq"><div class="loader" hidden>Loading...</div></div>
+
       </section>      
 
       <section id="code-of-conduct">
@@ -276,8 +293,6 @@
           </p>
         </div>        
       </section>
-
-   
 
     </main>
 

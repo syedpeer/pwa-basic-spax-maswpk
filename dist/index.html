@@ -62,11 +62,36 @@
       }
     </style>
 
+    <script>
+      function resetFooterPosition(sectName) {
+        console.log('Reseting ' + sectName)
+        document.querySelector(sectName).style.position = "fixed";
+        document.querySelector(sectName).style.left = "0";
+        document.querySelector(sectName).style.bottom = "0";
+        document.querySelector(sectName).style.width = "100%";
+      } 
+ 
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+
+    </script>
+
     <script src="../js/utility.js"></script>
 
   <link href="main.css" rel="stylesheet"></head>
 
-  <body>
+  <body  onload="resetFooterPosition('footer')">
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href='#' class="fa fa-home mr-3" onclick="dspPageSection('#home')"> Home</a>
@@ -160,9 +185,9 @@
         </div>
 
         <p>
-          <a class="fa fa-link mr-3" href="https://www.moph.gov.qa/english/Pages/Coronavirus2019.aspx">
+          <a class="fa fa-link mr-3" href="https://www.moph.gov.qa/english/Pages/Coronavirus2019.aspx" target="_blank">
              COVID-19  <b>[English]</b>  </a>
-          <a href="https://www.moph.gov.qa/arabic/Pages/Coronavirus2019.aspx">
+          <a href="https://www.moph.gov.qa/arabic/Pages/Coronavirus2019.aspx" target="_blank">
             <b>[عربي]</b></a><br/><br/>
 
           <a class="fa fa-link mr-3" href="https://www.moph.gov.qa/english/Documents/english/howtoprotectfromcoviden.pdf" target="_blank"> How To Protect From Covid-19</a><br/><br/>
@@ -210,7 +235,10 @@
       <section id="faq">
         <h3>Frequently Asked Questions</h3>
         <br/>
+        <button id="myBtn"><a href="#myHorznav" class="fa fa-arrow-up" style="color:white;"></a></button>
+
         <div class="faq"><div class="loader" hidden>Loading...</div></div>
+
       </section>      
 
       <section id="code-of-conduct">
@@ -265,8 +293,6 @@
           </p>
         </div>        
       </section>
-
-   
 
     </main>
 
