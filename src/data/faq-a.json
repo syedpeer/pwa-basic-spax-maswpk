@@ -1,0 +1,23 @@
+[
+  {
+    "title": "فَعَلَ , يَفْعَلُ",
+    "description":"to do",
+    "faqNum": "001",
+    "speakerId": "",
+    "category": "break"
+  },
+  {
+    "title": "فَتَحَ , يَفْتَحُ",
+    "description": "to open; to give victory",
+    "faqNum": "002",
+    "speakerId": "",
+    "category": "break"
+  },
+  {
+    "title": "بَعَثَ , يَبْعَثُ",
+    "description": "to raise; to resurrect",
+    "faqNum": "003",
+    "category": "break"
+  }
+
+]

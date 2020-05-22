@@ -20,7 +20,7 @@ class PWAConfApp {
 
     document.querySelector("#faq").style.display = "none";
     document.querySelector("#resources").style.display = "none";
-    document.querySelector("#about").style.display = "none";    
+    document.querySelector("#about").style.display = "none";
 
     this.registerSW();
   }

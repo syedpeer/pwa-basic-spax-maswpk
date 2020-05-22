@@ -77,7 +77,6 @@ header {
   top: 0;
   width: 100%;
   font-size: 1rem;
-  /* background: var(--dark-color); */
   background-color: #8d1b3d;
   color: var(--base-color);
 }
